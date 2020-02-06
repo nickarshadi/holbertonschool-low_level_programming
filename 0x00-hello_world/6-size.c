@@ -8,16 +8,19 @@ int main(void)
 	int schar;
 	int sint;
 	int slongint;
+	int slonglongint;
 	int sfloat;
 
 	schar = sizeof(char);
 	sint = sizeof(int);
 	slongint = sizeof(long int);
+	slonglongint = sizeof(long long int);
 	sfloat = sizeof(float);
 
 	printf("Size of a char: %d byte(s)\n", schar);
 	printf("Size of an int: %d byte(s)\n", sint);
 	printf("Size of a long int: %d byte(s)\n", slongint);
+	printf("Size of a long long int: %d byte(s)\n", slonglongint);
 	printf("Size of a float: %d byte(s)\n", sfloat);
 
 	return (0);
