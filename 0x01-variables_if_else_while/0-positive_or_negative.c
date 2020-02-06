@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
- * main - assign n
+ * main - print out number n
  * Return:0
  */
 int main(void)
