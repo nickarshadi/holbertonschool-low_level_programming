@@ -10,8 +10,11 @@ char c = 'a';
 while (i <= 25)
 {
 	if (c != 'q')
-	{ if (c != 'e')
+	{ if
+	(c != 'e')
+	{
 	putchar(c);
+	}
 	}
 	i++;
 	c++;
