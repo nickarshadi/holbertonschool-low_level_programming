@@ -13,7 +13,7 @@ int main(void)
 	schar = sizeof(char);
 	sint = sizeof(int);
 	slongint = sizeof(long int);
-	sfloat + sizeof(float);
+	sfloat = sizeof(float);
 
 	printf("Size of a char: %d byte(s)\n", schar);
 	printf("Size of an int: %d byte(s)\n", sint);
