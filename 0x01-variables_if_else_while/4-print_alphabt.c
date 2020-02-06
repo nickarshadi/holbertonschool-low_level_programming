@@ -9,8 +9,8 @@ int i = 0;
 char c = 'a';
 while (i <= 25)
 {
-	if (c != 'q' || c != 'e')
-	{
+	if (c != 'q')
+	{ if (c != 'e')
 	putchar(c);
 	}
 	i++;
