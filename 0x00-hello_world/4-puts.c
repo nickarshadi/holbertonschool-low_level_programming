@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- * First main function
- *next return 0
+ * main - print string of the project
+ * Return:0
  */
 int main(void)
 {
