@@ -6,15 +6,15 @@
 int main(void)
 {
 int i = 0;
-int z;
+int z = 9;
 
-while (i < 10)
+while (i < 9)
 {
 	putchar(i + '0');
 	putchar(',');
 	putchar(' ');
 	i++;
 }
-putchar('\n');
+putchar(z + '0');
 return (0);
 }
