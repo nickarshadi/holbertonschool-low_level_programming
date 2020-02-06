@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-int i=0;
+int i = 0;
 int z;
-while (i<10)
+while (i < 10)
 {
-	putchar(i+'0');
+	putchar(i + '0');
 	i++;
 }
 putchar('\n');
