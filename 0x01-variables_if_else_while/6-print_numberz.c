@@ -6,7 +6,6 @@
 int main(void)
 {
 int i = 0;
-int z;
 while (i < 10)
 {
 	putchar(i + '0');
