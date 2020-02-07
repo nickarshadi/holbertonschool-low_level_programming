@@ -26,8 +26,11 @@ while (i <= 9)
 			putchar(' ');
 			putchar(k + '0');
 			putchar(n + '0');
+			if (i != 9 || j != 9 || k != 9 || n != 9)
+			{
 			putchar(',');
 			putchar(' ');
+			}
 			n++;
 			}
 		k++;
