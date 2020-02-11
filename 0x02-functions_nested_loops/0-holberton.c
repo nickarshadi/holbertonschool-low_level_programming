@@ -5,14 +5,13 @@
  */
 int main(void)
 {
-	int i;
 	int i = 0;
-	char c[10] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
+	char c[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
 
-	while (i < 10)
+	while (i < 9)
 	{
-	_putchar(c[i]);
-	i++;
+		_putchar(c[i]);
+		i++;
 	}
 	return (0);
 }
