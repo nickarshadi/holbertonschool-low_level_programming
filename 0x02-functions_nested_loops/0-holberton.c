@@ -8,7 +8,7 @@ int main(void)
 	int i = 0;
 	char c[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
 
-	while (i < 9)
+	while (i < 10)
 	{
 		_putchar(c[i]);
 		i++;
