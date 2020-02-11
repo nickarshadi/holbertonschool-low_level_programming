@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *
- *
+ * jack_bauer - count to 24 hours
+ * Return: no return type
  *
  */
 void jack_bauer(void)
@@ -14,7 +14,6 @@ void jack_bauer(void)
 	while (a <= 2)
 	{
 		b = 0;
-		
 		while (b <= 9)
 		{
 			c = 0;
@@ -23,7 +22,6 @@ void jack_bauer(void)
 				d = 0;
 				while (d <= 9)
 				{
-					
 					_putchar(a + '0');
 					_putchar(b + '0');
 					_putchar(':');
@@ -34,7 +32,7 @@ void jack_bauer(void)
 					if (a == 2 && b == 3 && c == 5 && d == 9)
 					{
 						a = 10;
-					       	b = 10;
+						b = 10;
 						c = 10;
 						d = 11;
 					}
