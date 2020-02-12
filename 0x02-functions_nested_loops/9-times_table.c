@@ -5,21 +5,28 @@
  */
 void times_table(void)
 {
-	int x;
-	int y;
-	int z;
-	int a;
-	int b;
+	int x = 0;
+	int y = 0;
+	int z = 0;
+	int a = 0;
+	int b = 0;
 
 	while (x <= 9)
 	{
 		while (y <= 9)
 		{
 			z = x * y;
-			_putchar(z + '0');
-
+			a = z / 10;
+			b = z % 10;
+			_putchar(a + '0');
+			_putchar(b + '0');
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			x++;
 			y++;
 		}
+		y++;
 		x++;
 	}
 }
