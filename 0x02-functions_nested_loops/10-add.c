@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
- * int add - add two integers
+ * add - add two integers
  * Return: return added numbers
+ * @x: var x
+ * @y: var y
  */
 int add(int x, int y)
 {
