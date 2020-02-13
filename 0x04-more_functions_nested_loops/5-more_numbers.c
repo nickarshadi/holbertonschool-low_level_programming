@@ -21,7 +21,7 @@ void more_numbers(void)
 				_putchar(d + '0');
 			}
 			_putchar(c + '0');
-			if ( b == 14)
+			if (b == 14)
 			{
 				_putchar('\n');
 			}
