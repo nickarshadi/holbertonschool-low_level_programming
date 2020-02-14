@@ -11,7 +11,7 @@ int main(void)
 	long c = 0;
 	long d = 0;
 
-	for (b = 1; b < 1524887980; b++)
+	for (b = 1; b < 152488798; b++)
 	{
 		d = a % b;
 		if (d == 0)
