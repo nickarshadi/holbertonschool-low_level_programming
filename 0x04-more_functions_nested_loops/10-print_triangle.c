@@ -14,7 +14,7 @@ void print_triangle(int size)
 	int e;    /*anzahl #*/
 	int f;   /*letzte schleife*/
 
-	if (size != 0)
+	if (size > 0)
 	{
 	for (a = 0; a < size; a++)
 	{
