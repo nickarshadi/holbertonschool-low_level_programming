@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * _puts - print alphabet
- * @str: string 
+ * _puts - print string
+ * @str: string
  */
 void _puts(char *str)
 {
