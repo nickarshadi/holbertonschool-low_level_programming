@@ -3,7 +3,7 @@
 /**
  * _strlen - print size of string parameter
  * Return: length of string
- *
+ * @s: pointer to array of characters
  */
 int _strlen(char *s)
 {
