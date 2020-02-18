@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include "holberton.h"
 /**
- * main - print numbers
+ * main - print all prime numbers
  * Return: 0
  */
 int main(void)
