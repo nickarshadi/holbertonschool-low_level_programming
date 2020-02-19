@@ -7,7 +7,6 @@ void puts_half(char *str)
 {
 	int a = 0;
 	int b = 0;
-	int c = 0;
 
 	while (str[a] != '\0')
 	{
@@ -21,9 +20,10 @@ void puts_half(char *str)
 	{
 		b = (a -1) / 2;
 	}
-	for (c = b; c <= a; c++)
+	while (str[b]!= '\0')
 	{
-		_putchar(str[c]);
+		_putchar(str[b]);
+		b++;
 	}
 	_putchar('\n');
 }
