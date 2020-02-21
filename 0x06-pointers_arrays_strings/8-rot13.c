@@ -1,37 +1,26 @@
-#include <stdio.h>
+
 #include "holberton.h"
-
 /**
- * rot13 - rot13 encoding
- * @s: string
- *
- * Return: string with rot13;
- */
-
-char *rot13(char *s)
+* *rot13 - a string to rot13 codification
+*@a: Pointer variable
+*Return: a
+*/
+char *rot13(char *a)
 {
-        int i;
-        i = 0;
-
-        while (s[i] != '\0')
-        {
-                if (s[i] >= 65 && s[i] <= 77)
-                {
-                        s[i] = s[i] + 13;
-                }
-                else if (s[i] >= 78 && s[i] <= 90)
-                {
-                        s[i] = s[i] -13;
-                }
-                else if (s[i] >= 97 && s[i] <= 109)
-                {
-                        s[i] = s[i] + 13;
-                }
-                else if (s[i] >= 98 && s[i] <= 122)
-                {
-                        s[i] = s[i] -13;
-                }
-                i++;
-        }
-        return (s);
+int i = 0;
+int j = 0;
+char testarr1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char testarr2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+for (i = 0; a[i]; i++)
+{
+for (j = 0; testarr1[j]; j++)
+{
+if (a[i] == testarr1[j])
+{
+a[i] = testarr2[j];
+break;
+}
+}
+}
+return (a);
 }
