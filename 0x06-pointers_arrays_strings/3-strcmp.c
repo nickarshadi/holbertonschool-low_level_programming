@@ -3,6 +3,7 @@
  * _strcm - check two string
  * @s1: var1
  * @s2: var2
+ * Return: asci code difference
  */
 int _strcmp(char *s1, char *s2)
 {
