@@ -14,5 +14,12 @@ char *_strchr(char *s, char c)
 	if (s[x] == c)
 	return (&s[x]);
 	}
+	if (c == '\0')
+	{
+	return (&s[x]);
+	}
+	else
+	{
 	return ('\0');
+	}
 }
