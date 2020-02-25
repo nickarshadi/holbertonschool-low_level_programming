@@ -1,24 +1,24 @@
 /**
- * _strstr - function that locates a substring.
+ * _strstr - function that locates first occurece of substring.
  * @haystack: string
  * @needle: substring
- * Return: Always 0.
+ * Return: location of substring
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, a, j;
+	int x, y, z;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (x = 0; haystack[x] != '\0'; x++)
 	{
-		for (a = i, j = 0; needle[j] != '\0'; a++, j++)
+		for (y = x, z = 0; needle[z] != '\0'; y++, z++)
 		{
-			if (haystack[a] != needle[j] || haystack[a] == '\0')
+			if (haystack[y] != needle[z] || haystack[x] == '\0')
 				break;
 		}
-		if (needle[j] == '\0')
+		if (needle[z] == '\0')
 		{
-			return (haystack + i);
+			return (haystack + x);
 		}
 	}
 	return (0);
