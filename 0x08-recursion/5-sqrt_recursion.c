@@ -2,7 +2,7 @@
 /**
  * _sqrt_recursion - get the square root
  * @n: number
- * Return: Square root
+ * Return: integer
  */
 int _sqrt_recursion(int n)
 {
@@ -10,15 +10,21 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return sq(n, 0);
+	return (sq(n, 0));
 }
+/**
+ * sq - square and check
+ * @n: number
+ * @x: root
+ * Return: sq5
+ */
 int sq(int n, int x)
 {
 	int sum = x * x;
 
 	if (sum == n)
 	{
-		return x;
+		return (x);
 	}
 	else if (x == n)
 	{
@@ -26,6 +32,6 @@ int sq(int n, int x)
 	}
 	else
 	{
-		return sq(n, x + 1);
+		return (sq(n, x + 1));
 	}
 }
