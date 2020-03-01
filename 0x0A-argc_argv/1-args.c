@@ -4,7 +4,7 @@
  * main - print out the number of passed arguments
  * @argc: amount of passed argument
  * @argv: array of strings
- * Return 0;
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
