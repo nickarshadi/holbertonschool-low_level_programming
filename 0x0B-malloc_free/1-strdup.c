@@ -1,50 +1,32 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-int _strlen(char *s);
-
 /**
-* _strlen - function that returns the length of a string.
-* @s: string
-* Return: length of string
-**/
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
-* _strdup -  function that returns a pointer to a newly space
-* @str: String
-* Return: a pointer to the array.
- **/
-
+ * _strdup - return pointer to newly allocated space with copy of array
+ * @str: original array
+ * Return: the pointer to new string
+ */
 char *_strdup(char *str)
 {
-	int i, size;
+	int a; /* length */
+	int b;
 	char *ar;
 
-	if (str == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	size = _strlen(str);
-	ar = malloc((sizeof(char) * (size + 1)));
+	for (a = 0; *(str + a) != '\0'; a++)
+	{}
+	ar = malloc(sizeof(char) * a);
 	if (ar == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	for (b = 0; b < a; b++)
 	{
-		ar[i] = str[i];
+		ar[b] = str[b];
 	}
-	ar[i] = '\0';
 	return (ar);
+
 }
