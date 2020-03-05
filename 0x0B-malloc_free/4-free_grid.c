@@ -1,15 +1,18 @@
+#include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * free_grid - function that frees a 2 dimensional grid
- * @grid: grid
- * @height: height
+ * free_grid - free a two dimensional grid
+ * @grid: array to free from heap
+ * @height: height of array / second dimension
  */
 void free_grid(int **grid, int height)
 {
-	int i;
+	int a = 0;
 
-	for (i = 0; i < height; i++)
-		free(grid[i]);
+	for (a = 0; a < height; a++)
+	{
+		free(*(grid + a));
+	}
 	free(grid);
 }
