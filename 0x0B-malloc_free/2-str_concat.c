@@ -1,40 +1,16 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
-
-int _strlen(char *s);
-
 /**
- * _strlen - returns the length of a string.
- * @s: string input.
- * Return: length of an string.
+ * str_concat - concat two strings
+ * @s1: part 1
+ * @s2: part 2
+ * Return: return new string that is theconcatenate
  */
-int _strlen(char *s)
-{
-	int length;
-
-	length = 0;
-
-	while (s[length] != '\0')
-	{
-		length++;
-	}
-
-	return (length);
-}
-
-/**
- * *str_concat - function that concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: pointer should point to a newly allocated space in memory which
- * contains the contents of s1, followed by the contents of s2 ending with null
- * return NULL on failure
- */
-
 char *str_concat(char *s1, char *s2)
 {
-	int i, size_s1, size_s2, total_size;
-	char *new_arr;
+	char *co;
+	int a, b, c, d, e, f;
 
 	if (s1 == NULL)
 	{
@@ -44,23 +20,24 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	size_s1 = _strlen(s1);
-	size_s2 = _strlen(s2);
-	total_size = size_s1 + size_s2;
-
-	new_arr = malloc((total_size * sizeof(char)) + 1);
-	if (new_arr == NULL)
+	for (a = 0; s1[a] != '\0'; a++)
+	{}
+	for (b = 0; s2[b] != '\0'; b++)
+	{}
+	c = a + b;
+	co = malloc(sizeof(char) * c);
+	if (co == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0 ; i < size_s1 ; i++)
+	for (d = 0; d < a; d++)
 	{
-		new_arr[i] = s1[i];
+		co[d] = s1[d];
 	}
-	for (i = 0 ; i < size_s2 ; i++)
+	for (e = d, f = 0; e < c; e++, f++)
 	{
-		new_arr[size_s1 + i] = s2[i];
+		co[e] = s2[f];
 	}
-	new_arr[total_size + 1] = '\0';
-	return (new_arr);
+	co[e] = '\0';
+	return (co);
 }
