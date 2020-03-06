@@ -11,8 +11,13 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int b;
-	char *ar;
+	void *ar;
 
+	if (ptr == NULL)
+	{
+		ar = malloc(new_size);
+		return (ar);
+	}
 	if (old_size == new_size)
 	{
 		return (ptr);
@@ -25,17 +30,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size > old_size)
 	{
 		b = old_size;
-		copy(ar, ptr, b);
-		free(ptr);
-		return (ar);
 	}
 	else
 	{
 		b = new_size;
-		copy(ar, ptr, b);
-		free(ptr);
-		return (ar);
 	}
+	copy(ar, ptr, b);
+	free(ptr);
+	return (ar);
 }
 /**
  * copy - copy one array in another
