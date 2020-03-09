@@ -1,42 +1,21 @@
-#include <stdlib.h>
-/**
- * alloc_grid - alloc_grid
- * @width: width
- * @height: height
- * Return: double pointer.
- */
-int **alloc_grid(int width, int height)
-{
-	int **p;
-	int i, j;
-
-	if (width <= 0 || height <= 0)
-		return (NULL);
-
-	p = malloc(sizeof(p) * height);
-
-	if (p == NULL)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; i < height; i++)
-	{
-		p[i] = malloc(sizeof(int) * width);
-
-		if (*(p + i) == NULL)
-		{
-			for (i -= 1; i >= 0; i--)
-			{
-				free(p[i]);
-			}
-			free(p);
-			return (NULL);
-		}
-		for (j = 0; j < width; j++)
-		{
-			*(*(p + i) + j) = 0;
-		}
-	}
-	return (p);
-}
+ 
+    int r = 3, c = 4, i, j, count; 
+  
+    int **arr = (int **)malloc(r * sizeof(int *)); 
+    for (i=0; i<r; i++) 
+         arr[i] = (int *)malloc(c * sizeof(int)); 
+  
+    // Note that arr[i][j] is same as *(*(arr+i)+j) 
+    count = 0; 
+    for (i = 0; i <  r; i++) 
+      for (j = 0; j < c; j++) 
+         arr[i][j] = ++count;  // OR *(*(arr+i)+j) = ++count 
+  
+    for (i = 0; i <  r; i++) 
+      for (j = 0; j < c; j++) 
+         printf("%d ", arr[i][j]); 
+  
+   /* Code for further processing and free the  
+      dynamically allocated memory */
+  
+   return 0; 
