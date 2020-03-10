@@ -15,12 +15,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int na_l;
 	int ow_l;
 
-	na = malloc(sizeof(*name));
+	na_l = _strlen(name);
+	ow_l = _strlen(owner);
+
+	na = malloc(na_l + 1);
 	if (na == NULL)
 	{
 		return (NULL);
 	}
-	ow = malloc(sizeof(*owner));
+	ow = malloc(ow_l + 1);
 	if (ow == NULL)
 	{
 		free(na);
@@ -33,8 +36,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ow);
 		return (NULL);
 	}
-	na_l = _strlen(name);
-	ow_l = _strlen(owner);
 	_memcpy(na, name, na_l + 1);
 	_memcpy(ow, owner, ow_l + 1);
 	nath->name = na;
