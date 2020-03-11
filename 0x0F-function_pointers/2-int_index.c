@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-
 /**
  * int_index - write first coincidence of function != 0
  * @array: array of integers to be checked
@@ -11,7 +10,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int a;
 
-	if (size < 0)
+	if (size <= 0)
 		return (-1);
 
 	if (array && cmp)
@@ -23,7 +22,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 				return (a);
 			}
 		}
-		return (0);
 	}
 	return (-1);
 }
