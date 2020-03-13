@@ -1,0 +1,153 @@
+#ifndef CALC_H
+#define CALC_H
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ */
+typedef struct op
+{
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
+
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
+
+#endif
+#include "3-calc.h"
+/**
+ * get_op_func - check what operator to use and return it
+ * @s: operator
+ * Return: operator valid result
+ */
+int (*get_op_func(char *s))(int a, int b)
+{
+	op_t ops[] = {
+	{"+", op_add},
+	{"-", op_sub},
+	{"*", op_mul},
+	{"/", op_div},
+	{"%", op_mod},
+	{NULL, NULL}
+	};
+	int i = 0;
+
+	while (i < 5)
+	{
+		if (*s == *ops[i].op && s[1] == 0)
+		{
+			return (ops[i].f);
+		}
+	i++;
+	}
+	printf("Error\n");
+	exit(99);
+}
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - calc num1 operator num2
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 1
+ * program prints result followed by newline
+ * all numbers stored in int
+ * operator none of the 5 print Error exit status 99
+ * number arguments wrong error\n exit status 98
+ * divide by 0 error exit status 100
+ */
+int main(int argc, char **argv)
+{
+	int a = atoi(argv[1]);
+	int b = atoi(argv[3]);
+	char *c = argv[2];
+
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	printf("%d\n", get_op_func(c)(a, b));
+	return (0);
+}
+#include "3-calc.h"
+/**
+ * op_add - add two numbers a and b
+ * @a: sumerand 1
+ * @b: sumerand 2
+ * Return: sum
+ */
+int op_add(int a, int b)
+{
+	a += b;
+
+	return (a);
+}
+/**
+ * op_sub - subtract two numbers
+ * @a: int 1
+ * @b: int 2
+ * Return: return differnce;
+ */
+int op_sub(int a, int b)
+{
+	a -= b;
+
+	return (a);
+}
+/**
+ * op_mul - multiplicate a and b
+ * @a: int 1
+ * @b: int 2
+ * Return: product
+ */
+int op_mul(int a, int b)
+{
+	a *= b;
+
+	return (a);
+}
+/**
+ * op_div - divide a through b
+ * @a: int 1
+ * @b: int 2
+ * Return: divident
+ */
+int op_div(int a, int b)
+{
+	if (b == 0 || b > a)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	a /= b;
+
+	return (a);
+}
+/**
+ * op_mod - modulo of two numbers
+ * @a: int 1
+ * @b: int 2
+ * Return: modulo
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0 || b > a)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	a %= b;
+
+	return (a);
+}
