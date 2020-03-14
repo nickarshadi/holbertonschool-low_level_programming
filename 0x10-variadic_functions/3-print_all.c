@@ -11,7 +11,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	struct1 op[] = {
+	strukturen op[] = {
 	{"c", pchar},
 	{"i", pint},
 	{"f", pfloat},

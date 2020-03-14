@@ -10,15 +10,16 @@ void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
 /**
- * struct Struktur - opt struct1
+ * struct Struktur - opt strukturen
  * @form: The operator
  * @f: The function associated
+ * Description: Struktur zum arbeiten
  */
 typedef struct Struktur
 {
 	char *form;
 	void (*f)(va_list valist);
-} struct1;
+} strukturen;
 
 void pchar(va_list valist);
 void pint(va_list valist);
