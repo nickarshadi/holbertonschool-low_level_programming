@@ -5,7 +5,9 @@
 #include <stdarg.h>
 /**
  * print_all - print every letter that you get
+ * Desc: print_all conent
  * @format: type of incoming variables
+ * Return: print arguments
  */
 void print_all(const char * const format, ...)
 {
@@ -42,7 +44,9 @@ void print_all(const char * const format, ...)
 }
 /**
  * pchar - print char
+ * Desc: pchar
  * @valist: variadic list
+ * Return: print char
  */
 void pchar(va_list valist)
 {
