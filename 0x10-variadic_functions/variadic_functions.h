@@ -9,9 +9,10 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 /**
- * Struktur - Objekt form und funktion
- * @form: format
- * @f: funktion
+ * struct Struktur - opt Struktur
+ *
+ * @form: The operator
+ * @f: The function associated
  */
 typedef struct Struktur
 {
