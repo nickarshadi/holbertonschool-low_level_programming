@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", empty);
 				op[b].f(valist);
-				empty = ",";
+				empty = ", ";
 			}
 			b++;
 		}
