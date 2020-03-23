@@ -43,7 +43,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		for(a = 0; str[a] != '\0'; a++)
+		for (a = 0; str[a] != '\0'; a++)
 		{}
 		new->len = a;
 		new->str = strdup(str);
