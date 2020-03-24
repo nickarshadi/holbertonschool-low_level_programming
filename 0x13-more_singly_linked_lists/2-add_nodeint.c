@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - add a new dnoe at the beginning of
+ * add_nodeint - add a new node at the beginning of
  * a listint_t list
  * @head: head of list
  * @n: list->n
@@ -29,5 +29,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		new->next = *head;
 	}
 	*head = new;
-	return (*head);
+	return (new);
 }
