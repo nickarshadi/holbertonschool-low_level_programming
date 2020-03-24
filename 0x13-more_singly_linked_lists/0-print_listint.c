@@ -15,7 +15,7 @@
 size_t print_listint(const listint_t *h)
 {
 	const listint_t *node;
-	int a = 1;
+	int a = 0;
 
 	node = h;
 	while (node)
