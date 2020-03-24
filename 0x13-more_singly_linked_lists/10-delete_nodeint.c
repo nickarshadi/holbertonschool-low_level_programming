@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - Write a function that deletes 
+ * delete_nodeint_at_index - Write a function that deletes
  * the node at the index index of a listint_t linked list
  * @head: head of list
  * @index: index is the index of the node that should
@@ -23,11 +23,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	node = *head;
 	while (node)
 	{
-		if (0 == index)
+		if (index == 0)
 		{
-			node1= node->next;
+			node1 = node->next;
 			*head = node1;
-			free(node); 
+			free(node);
 			return (1);
 		}
 		if (a + 1 == index)
