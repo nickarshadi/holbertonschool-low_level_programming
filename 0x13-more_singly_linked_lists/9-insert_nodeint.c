@@ -35,12 +35,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	while (node)
 	{
-		if (a + 1 == idx)
+		if (idx == a + 1)
 		{
-				node1 = node->next;
-				node->next = new;
-				new->next = node1;
-				return (new);
+			node1 = node->next;
+			node->next = new;
+			new->next = node1;
+			return (new);
 		}
 		node = node->next;
 		a++;
