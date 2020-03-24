@@ -29,7 +29,8 @@ int main(void)
     return (0);
 }
 /*
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra 9-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 9-insert_nodeint.c -o j
+julien@ubuntu:~/0x13. More singly linked lists$
+gcc -Wall -pedantic -Werror -Wextra 9-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 9-insert_nodeint.c -o j
 julien@ubuntu:~/0x13. More singly linked lists$ ./j 
 0
 1
