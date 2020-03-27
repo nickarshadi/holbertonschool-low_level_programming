@@ -11,9 +11,8 @@
  **/
 void print_binary(unsigned long int n)
 {
-	int bits, start = 0;
+	int bits = sizeof(long int) * 8, start = 0;
 
-	bits = sizeof(long int) * 8;
 	while (bits)
 	{
 		if (n & (1uL << --bits))
@@ -30,5 +29,4 @@ void print_binary(unsigned long int n)
 	{
 		_putchar('0');
 	}
-	_putchar('\n');
 }
